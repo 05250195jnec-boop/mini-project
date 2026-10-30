@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Availability - Nestwell</title>
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        
+        <aside class="sidebar">
+            <h2>
+                <img src="../../images/logo.jpeg" alt="Logo" style="height:30px; width:30px; border-radius:50%;">
+                Nestwell
+            </h2>
+            <a href="dashboard.html">Overview</a>
+            <a href="availability.html" class="active">My Availability</a>
+            <a href="profile.html">My Profile</a>
+            <a href="../../frontened/index.html" class="logout-btn">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <h1>Manage Availability</h1>
+            
+            <div style="background: white; padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow); max-width: 800px;">
+                <p style="margin-bottom: 1.5rem; color: var(--text-light);">Check the days and times you are available to accept bookings. Parents will only be able to book you during these hours.</p>
+                
+                <form onsubmit="event.preventDefault(); alert('Availability updated successfully!');">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        
+                        <!-- Monday -->
+                        <div style="border: 1px solid #eee; padding: 1rem; border-radius: 8px; background: #fafafa;">
+                            <label style="font-weight: bold; display: block; margin-bottom: 10px; color: var(--primary);">Monday</label>
+                            <label style="display:block; margin-bottom:5px;"><input type="checkbox" checked> Morning (8AM - 12PM)</label>
+                            <label style="display:block;"><input type="checkbox"> Afternoon (12PM - 5PM)</label>
+                        </div>
+                        
+                        <!-- Tuesday -->
+                        <div style="border: 1px solid #eee; padding: 1rem; border-radius: 8px; background: #fafafa;">
+                            <label style="font-weight: bold; display: block; margin-bottom: 10px; color: var(--primary);">Tuesday</label>
+                            <label style="display:block; margin-bottom:5px;"><input type="checkbox" checked> Morning (8AM - 12PM)</label>
+                            <label style="display:block;"><input type="checkbox" checked> Afternoon (12PM - 5PM)</label>
+                        </div>
+                        
+                        <!-- Wednesday -->
+                        <div style="border: 1px solid #eee; padding: 1rem; border-radius: 8px; background: #fafafa;">
+                            <label style="font-weight: bold; display: block; margin-bottom: 10px; color: var(--primary);">Wednesday</label>
+                            <label style="display:block; margin-bottom:5px;"><input type="checkbox"> Morning (8AM - 12PM)</label>
+                            <label style="display:block;"><input type="checkbox"> Afternoon (12PM - 5PM)</label>
+                        </div>
+                        
+                        <!-- Thursday -->
+                        <div style="border: 1px solid #eee; padding: 1rem; border-radius: 8px; background: #fafafa;">
+                            <label style="font-weight: bold; display: block; margin-bottom: 10px; color: var(--primary);">Thursday</label>
+                            <label style="display:block; margin-bottom:5px;"><input type="checkbox" checked> Morning (8AM - 12PM)</label>
+                            <label style="display:block;"><input type="checkbox" checked> Afternoon (12PM - 5PM)</label>
+                        </div>
+
+                        <!-- Friday -->
+                        <div style="border: 1px solid #eee; padding: 1rem; border-radius: 8px; background: #fafafa;">
+                            <label style="font-weight: bold; display: block; margin-bottom: 10px; color: var(--primary);">Friday</label>
+                            <label style="display:block; margin-bottom:5px;"><input type="checkbox" checked> Morning (8AM - 12PM)</label>
+                            <label style="display:block;"><input type="checkbox" checked> Afternoon (12PM - 5PM)</label>
+                        </div>
+
+                        <!-- Saturday -->
+                        <div style="border: 1px solid #eee; padding: 1rem; border-radius: 8px; background: #fafafa;">
+                            <label style="font-weight: bold; display: block; margin-bottom: 10px; color: var(--primary);">Saturday</label>
+                            <label style="display:block; margin-bottom:5px;"><input type="checkbox"> Morning (8AM - 12PM)</label>
+                            <label style="display:block;"><input type="checkbox"> Afternoon (12PM - 5PM)</label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="confirm-btn" style="background: var(--primary); margin-top: 2rem; width: auto; padding: 12px 30px;">Update Calendar</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Nestwell</title>
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2>
+                <img src="../../images/logo.jpeg" alt="Logo" style="height:30px; width:30px; border-radius:50%;">
+                Nestwell Admin
+            </h2>
+            <a href="dashboard.html" class="active">Platform Overview</a>
+            <a href="verify-users.html">Verify Caretakers</a>
+            <a href="mana-reports.html">Manage Reports</a>
+            <a href="../../frontened/index.html" class="logout-btn">Logout</a>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <h1>Platform Overview</h1>
+            
+            <!-- STATS CARDS -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Parents</h3>
+                    <div class="number">142</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Caretakers</h3>
+                    <div class="number">38</div>
+                </div>
+                <div class="stat-card" style="border-bottom-color: var(--secondary);">
+                    <h3>Pending Verifications</h3>
+                    <div class="number" style="color: var(--secondary);">5</div>
+                </div>
+                <div class="stat-card" style="border-bottom-color: var(--success);">
+                    <h3>Total Bookings</h3>
+                    <div class="number" style="color: var(--success);">320</div>
+                </div>
+            </div>
+
+            <!-- RECENT ACTIVITY TABLE -->
+            <h2>Recent Platform Activity</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>User</th>
+                        <th>Action</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Today, 10:45 AM</td>
+                        <td>Sonam Choden (Caretaker)</td>
+                        <td>Uploaded new certificate</td>
+                        <td><span class="status-badge status-pending">Pending Review</span></td>
+                    </tr>
+                    <tr>
+                        <td>Today, 09:30 AM</td>
+                        <td>John Doe (Parent)</td>
+                        <td>Booked Dechen Wangmo</td>
+                        <td><span class="status-badge status-accepted">Confirmed</span></td>
+                    </tr>
+                    <tr>
+                        <td>Yesterday, 04:15 PM</td>
+                        <td>Karma Dema (Caretaker)</td>
+                        <td>Created account</td>
+                        <td><span class="status-badge status-completed">Completed</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>

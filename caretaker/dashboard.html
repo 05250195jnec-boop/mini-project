@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caretaker Dashboard - Nestwell</title>
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2>
+                <img src="../../images/logo.jpeg" alt="Logo" style="height:30px; width:30px; border-radius:50%;">
+                Nestwell
+            </h2>
+            <a href="dashboard.html" class="active">Overview</a>
+            <a href="availability.html">My Availability</a>
+            <a href="profile.html">My Profile</a>
+            <a href="../../frontened/index.html" class="logout-btn">Logout</a>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <h1>Caretaker Overview</h1>
+            
+            <!-- STATS CARDS -->
+            <div class="stats-grid">
+                <div class="stat-card" style="border-bottom-color: var(--secondary);">
+                    <h3>New Requests</h3>
+                    <div class="number" style="color: var(--secondary);">1</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Upcoming Jobs</h3>
+                    <div class="number">3</div>
+                </div>
+                <div class="stat-card" style="border-bottom-color: var(--success);">
+                    <h3>Total Earnings</h3>
+                    <div class="number" style="color: var(--success);">Nu. 4,500</div>
+                </div>
+            </div>
+
+            <!-- PENDING REQUESTS TABLE -->
+            <h2>Action Required: Pending Requests</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Parent Name</th>
+                        <th>Date & Time</th>
+                        <th>Child Care Notes</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>May 25, 2024<br><span style="color:var(--text-light); font-size:0.9rem;">09:00 AM (4 hrs)</span></td>
+                        <td><span style="color: #dc2626; font-size: 0.9rem; font-weight: bold;">⚠️ Peanut Allergy</span></td>
+                        <td>
+                            <button class="book-btn" style="background: #059669; font-size: 0.8rem; margin-right: 5px;" onclick="alert('Booking Accepted!')">Accept</button>
+                            <button class="book-btn" style="background: #dc2626; font-size: 0.8rem;" onclick="alert('Booking Declined.')">Decline</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>

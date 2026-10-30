@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Caretakers - Nestwell Admin</title>
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        
+        <aside class="sidebar">
+            <h2>
+                <img src="../../images/logo.jpeg" alt="Logo" style="height:30px; width:30px; border-radius:50%;">
+                Nestwell Admin
+            </h2>
+            <a href="dashboard.html">Platform Overview</a>
+            <a href="verify-users.html" class="active">Verify Caretakers</a>
+            <a href="mana-reports.html">Manage Reports</a>
+            <a href="../../frontened/index.html" class="logout-btn">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <h1>Caretaker Verification</h1>
+            <p style="margin-bottom: 1.5rem; color: var(--text-light);">Review identity documents and certificates. Approving a user will display the verified icon on their public profile.</p>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Caretaker Name</th>
+                        <th>Location</th>
+                        <th>Documents</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Pending Verification -->
+                    <tr>
+                        <td>Sonam Choden</td>
+                        <td>Paro</td>
+                        <td><a href="#" style="color: var(--primary); text-decoration: underline;">View ID & Certificate</a></td>
+                        <td><span class="status-badge status-pending">Pending</span></td>
+                        <td>
+                            <button class="book-btn" style="background: #059669; font-size: 0.8rem; margin-right: 5px;" onclick="alert('Caretaker Approved & Verified!')">Approve</button>
+                            <button class="book-btn" style="background: #dc2626; font-size: 0.8rem;" onclick="alert('Verification Rejected.')">Reject</button>
+                        </td>
+                    </tr>
+                    <!-- Already Verified -->
+                    <tr>
+                        <td>Dechen Wangmo</td>
+                        <td>Thimphu</td>
+                        <td><a href="#" style="color: var(--primary); text-decoration: underline;">View Documents</a></td>
+                        <td><span class="status-badge status-accepted">Verified</span></td>
+                        <td>
+                            <button class="book-btn" style="background: #6b7280; font-size: 0.8rem;" onclick="alert('Profile Suspended.')">Suspend</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nestwell - Trusted Childcare Booking</title>
+    <!-- Links to folders outside 'frontened' -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="Nestwell Logo" class="nav-logo">
+            Nestwell
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Find Care</a>
+            <a href="register.html">Become a Caretaker</a>
+            <a href="login.html" class="btn-login">Login / Register</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Find Trusted Childcare, Easily.</h1>
+        <p>Search verified caretakers in your area. Book safely and securely with Nestwell.</p>
+        
+        <form class="search-box" id="searchForm">
+            <div class="search-group">
+                <label>Location</label>
+                <input type="text" id="searchLocation" placeholder="e.g. Thimphu">
+            </div>
+            <div class="search-group">
+                <label>Child's Age</label>
+                <select id="searchAge">
+                    <option value="">Any Age</option>
+                    <option value="infant">Infant (0-1)</option>
+                    <option value="toddler">Toddler (1-3)</option>
+                    <option value="preschool">Preschool (3-5)</option>
+                </select>
+            </div>
+            <div class="search-group">
+                <label>Date Needed</label>
+                <input type="date" id="searchDate">
+            </div>
+            <button type="submit" class="search-btn">Search</button>
+        </form>
+    </section>
+
+    <!-- CARETAKER LISTINGS -->
+    <div class="container">
+        <h2>Available Caretakers</h2>
+        <div class="caretaker-grid" id="caretakerGrid">
+            <!-- Cards injected by JS -->
+        </div>
+    </div>
+
+    <!-- BOOKING MODAL -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Book <span id="modalCaretakerName"></span></h2>
+            <form id="bookingForm">
+                <input type="hidden" id="modalCaretakerId">
+                
+                <div class="form-group">
+                    <label>Select Date</label>
+                    <input type="date" id="bookDate" required>
+                </div>
+                <div class="form-group">
+                    <label>Start Time</label>
+                    <input type="time" id="bookTime" required>
+                </div>
+                <div class="form-group">
+                    <label>Duration (Hours)</label>
+                    <select id="bookDuration" required onchange="calculatePrice()">
+                        <option value="2">2 Hours</option>
+                        <option value="4">4 Hours</option>
+                        <option value="8">Full Day (8 Hours)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Number of Children</label>
+                    <input type="number" id="bookChildren" min="1" max="5" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label>Child Care Notes (Allergies, Routines, etc.)</label>
+                    <textarea id="bookNotes" rows="3" placeholder="E.g., Peanut allergy, needs a nap at 1 PM..." required></textarea>
+                </div>
+                
+                <div class="price-summary">
+                    <span>Total Price:</span>
+                    <span id="modalPrice">Nu. 0</span>
+                </div>
+                
+                <button type="submit" class="confirm-btn">Confirm Booking Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Links to JS -->
+    <script src="../js/main.js"></script>
+    <script src="../js/booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Reports - Nestwell Admin</title>
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        
+        <aside class="sidebar">
+            <h2>
+                <img src="../../images/logo.jpeg" alt="Logo" style="height:30px; width:30px; border-radius:50%;">
+                Nestwell Admin
+            </h2>
+            <a href="dashboard.html">Platform Overview</a>
+            <a href="verify-users.html">Verify Caretakers</a>
+            <a href="mana-reports.html" class="active">Manage Reports</a>
+            <a href="../../frontened/index.html" class="logout-btn">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <h1>User Reports & Issues</h1>
+            <p style="margin-bottom: 1.5rem; color: var(--text-light);">Review complaints filed by parents or caretakers. Take action against profiles that violate community guidelines.</p>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Report ID</th>
+                        <th>Reported User</th>
+                        <th>Reported By</th>
+                        <th>Reason</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#RPT-004</td>
+                        <td>Karma Dema (Caretaker)</td>
+                        <td>John Doe (Parent)</td>
+                        <td><span style="color: #dc2626; font-weight: 500;">Late arrival without notice</span></td>
+                        <td>
+                            <button class="book-btn" style="background: var(--primary); font-size: 0.8rem; margin-right: 5px;" onclick="alert('Warning issued to user.')">Warn User</button>
+                            <button class="book-btn" style="background: #dc2626; font-size: 0.8rem;" onclick="alert('Account suspended.')">Suspend</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#RPT-003</td>
+                        <td>Parent User</td>
+                        <td>Sonam Choden (Caretaker)</td>
+                        <td><span style="color: var(--text-dark);">Unreasonable cancellation</span></td>
+                        <td>
+                            <button class="book-btn" style="background: #6b7280; font-size: 0.8rem;" onclick="alert('Report dismissed.')">Dismiss</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>

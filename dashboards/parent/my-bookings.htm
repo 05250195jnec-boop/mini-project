@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings - Nestwell</title>
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        
+        <aside class="sidebar">
+            <h2>
+                <img src="../../images/logo.jpeg" alt="Logo" style="height:30px; width:30px; border-radius:50%;">
+                Nestwell
+            </h2>
+            <a href="dashboard.html">Overview</a>
+            <a href="my-bookings.html" class="active">My Bookings</a>
+            <a href="profile.html">Child Care Notes</a>
+            <a href="../../frontened/index.html" class="logout-btn">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <h1>All My Bookings</h1>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Caretaker</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Upcoming Booking -->
+                    <tr>
+                        <td>#101</td>
+                        <td>Dechen Wangmo</td>
+                        <td>May 20, 2024</td>
+                        <td><span class="status-badge status-accepted">Accepted</span></td>
+                        <td>Nu. 300</td>
+                        <td>-</td>
+                    </tr>
+                    <!-- Pending Booking -->
+                    <tr>
+                        <td>#102</td>
+                        <td>Sonam Choden</td>
+                        <td>May 22, 2024</td>
+                        <td><span class="status-badge status-pending">Pending</span></td>
+                        <td>Nu. 200</td>
+                        <td>-</td>
+                    </tr>
+                    <!-- Past Booking -->
+                    <tr>
+                        <td>#094</td>
+                        <td>Karma Dema</td>
+                        <td>April 10, 2024</td>
+                        <td><span class="status-badge status-completed">Completed</span></td>
+                        <td>Nu. 400</td>
+                        <td>
+                            <button class="book-btn" style="background:var(--secondary); font-size:0.8rem; padding: 5px 10px;" onclick="alert('Review modal would open here!')">Leave Review</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>

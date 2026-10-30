@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Dashboard - Nestwell</title>
+    <!-- Go up 2 levels to find css -->
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2>
+                <img src="../../images/logo.jpeg" alt="Logo" style="height:30px; width:30px; border-radius:50%;">
+                Nestwell
+            </h2>
+            <a href="dashboard.html" class="active">Overview</a>
+            <a href="my-bookings.html">My Bookings</a>
+            <a href="profile.html">Child Care Notes</a>
+            <!-- Link back to frontend login/index -->
+            <a href="../../frontened/index.html" class="logout-btn">Logout</a>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <h1>Parent Overview</h1>
+            
+            <!-- STATS CARDS -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Upcoming Bookings</h3>
+                    <div class="number">2</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Past Bookings</h3>
+                    <div class="number">5</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Spent</h3>
+                    <div class="number">Nu. 1,250</div>
+                </div>
+            </div>
+
+            <!-- RECENT BOOKINGS TABLE -->
+            <h2>Next Up</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Caretaker</th>
+                        <th>Date & Time</th>
+                        <th>Status</th>
+                        <th>Total Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="bookingsTableBody">
+                    <!-- Data populated by dashboard.js -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <!-- Go up 2 levels to find js -->
+    <script src="../../js/dashboard.js"></script>
+</body>
+</html>
